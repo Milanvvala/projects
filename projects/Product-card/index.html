@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <article class="product">
+      <picture>
+      <source srcset="images/image-product-desktop.jpg" media="(min-width:600px)"> 
+      </source>
+      <img src="images/image-product-mobile.jpg" alt="img" class="p_img">
+      </picture>
+      <div class="p_content">
+        <p class="p_cat">Perfume</p>
+        <h1 class="p_title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+        <div class="flex-group">
+          <p class="price"><span class="visually-hidden">Current Price</span>$149.99</p>
+          <p class="o_price"><span class="visually-hidden">Orignal Price</span><s class="st">$169.99</s></p>
+        </div>
+        <button data-icon="s_cart" class="button">Add to Cart</button>
+      </div>
+    </article>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Milan</a>.
+  </div>
+</body>
+</html>
