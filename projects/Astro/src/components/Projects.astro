@@ -1,0 +1,67 @@
+---
+const tools = [
+  "html5",
+  "css3",
+  "javascript",
+  "react",
+  "reactrouter",
+  "nodedotjs",
+  "dotenv",
+  "bootstrap",
+  "jsonwebtokens",
+  "express",
+  "nodemon",
+  "mongodb",
+  "vite",
+  "npm",
+  "pnpm",
+  "github",'visualstudiocode'
+];
+---
+
+<section>
+  <div class="container">
+    <hgroup>
+      <h2>Tools and Technologies</h2>
+      <h3>Programming Languages, Frameworks, Databases, Design Tools</h3>
+    </hgroup>
+    <div class="grid" id="bw">
+      {
+        tools.map((e) => {
+          return (
+            <div >
+              <article id="bwcard">
+                <img
+                  height="32"
+                  width="32"
+                  src={`https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/${e}.svg`}
+                />
+              </article>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  #bwcard {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  width: 75px;
+  text-align: center;
+}
+#bw{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (min-width: 576px) {
+  #bw {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+</style>
+<!--key={crypto.randomUUID()} -->

@@ -1,0 +1,44 @@
+---
+import bm from "../utils/bm.png";
+import dp from "../utils/dp.png";
+const arr = [
+  {
+    title: "Bookmarking App",
+    link: "",
+    detail: "Tools: react, node, express, mongodb, JWT",
+    src: bm,
+  },
+  {
+    title: "Landing page Design",
+    link: "",
+    detail: "Tools: Figma",
+    src: dp,
+  }
+];
+---
+
+<section>
+  <div class="container">
+    <hgroup>
+      <h2>Projects</h2>
+      <h3>Devlopment & Design projects</h3>
+    </hgroup>
+    <div class="grid" >
+      { arr.map((e) => {
+          return (
+            <div>
+              <a href={e.link}> <small>{e.title}</small> <img style={{border:'white 1px solid'}}src={e.src} /> </a>
+              <p> <small>{e.detail}</small> </p>
+            </div>
+          ); }) }
+    </div>
+  </div>
+</section>
+<style>
+  @media (min-width: 992px) {.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }}
+  @media (min-width: 576px){ .grid {
+    grid-template-columns: 1fr 1fr;
+  }}
+</style>
