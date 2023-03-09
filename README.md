@@ -1,5 +1,0 @@
-# projects
-all projects 
-
-
-test

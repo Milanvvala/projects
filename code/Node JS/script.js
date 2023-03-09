@@ -1,3 +1,31 @@
+// const script2 = require('./script2')
+import { largeNumber } from './script2.js'
+
+// const a = script2.largeNumber;
+const a = largeNumber;
+const b = 50
+
+console.log(a,b)
+// console.log(__dirname);
+//-----------------------------------------------------------------
+// export const largeNumber = 30
+
+
+// module.exports = {
+//     largeNumber: largeNumber
+// }
+
+//-----------------------------------------------------------------
+const fs = require('fs');
+
+fs.readFile('./test.txt',(err,data)=>{
+    if(err){
+        console.log('Error')
+    }
+    console.log(data.toString());
+})
+
+//-----------------------------------------------------------------
 // import bodyParser from 'body-parser';
 import express from 'express'; const app = express();
 import { dirname } from 'path'; import { fileURLToPath } from 'url';
@@ -39,3 +67,27 @@ const server = http.createServer((request,response)=>{
 })
 server.listen(3000);}*/
  
+//-----------------------------------------------------------------
+// export const largeNumber = 30
+// console.log(largeNumber);
+// console.log("object");
+// import express from 'express';
+// "type": "module",
+// const express = require('express');
+// const cTMongo = require('./db');
+// cTMongo(); 
+// const app = express();
+// const port = 3000
+// //routes
+// app.use(express.json())
+// app.use('/api/auth', require('./routes/auth'))
+// // app.use('/api/notes', require('./routes/notes'))
+
+// // app.get('/', (req, res) => {
+// //   res.send('Hello World!')
+// // })
+
+// app.listen(port, () => {
+//   console.log(`Example app listening on port http://localhost:${port}`)
+// })
+//-----------------------------------------------------------------
