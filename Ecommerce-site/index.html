@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>E-Commerce Website</title>
+  </head>
+
+  <body>
+    <!--header-->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="RedStore_Img/images/logo.png" width="125px" />
+          </div>
+          <nav>
+            <ul id="menuitems">
+              <li><a href="">Home</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">Contacts</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Accounts</a></li>
+            </ul>
+          </nav>
+          <span
+            class="material-symbols-outlined"
+            id="cart"
+            style="height: 30px; width: 30px"
+          >
+            shopping_cart</span
+          >
+          <span
+            class="material-symbols-outlined"
+            id="menu"
+            style="height: 30px; width: 30px"
+            onclick="menuToggle()"
+          >
+            menu
+          </span>
+          <!-- <img src="RedStore_Img/images/cart.png" width="30px" height="30px" /> -->
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+            <p>
+              Lorem ipsum Ipsam, aspernatur totam <br />
+              impedit animi corrupti dicta explicabo tenetur mollitia veritatis.
+            </p>
+            <a href="" class="btn">Explore Now &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="RedStore_Img/images/image1.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--featured categories-->
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="RedStore_Img/images/category-1.jpg" />
+          </div>
+          <div class="col-3">
+            <img src="RedStore_Img/images/category-2.jpg" />
+          </div>
+          <div class="col-3">
+            <img src="RedStore_Img/images/category-3.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--featured Products-->
+    <div class="small-container">
+      <h2 class="title">Featured Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-1.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-2.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-3.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-4.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+      </div>
+
+      <h2 class="title">Latest Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-5.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-6.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-7.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-8.jpg" />
+          <h4>Title 1</h4>
+          <div class="rating">
+            <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+          </div>
+          <p>$500.00</p>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-9.jpg" />
+            <h4>Title 1</h4>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <p>$500.00</p>
+          </div>
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-10.jpg" />
+            <h4>Title 1</h4>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <p>$500.00</p>
+          </div>
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-11.jpg" />
+            <h4>Title 1</h4>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <p>$500.00</p>
+          </div>
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-12.jpg" />
+            <h4>Title 1</h4>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <p>$500.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Offers-->
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="RedStore_Img/images/exclusive.png" class="offer-img" />
+          </div>
+          <div class="col-2">
+            <p>Lorem ipsum dolor sit amet</p>
+            <h1>Product Title</h1>
+            <small
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              fuga eligendi assumenda optio molestiae libero repellendus
+              ratione.
+            </small>
+            <a href="" class="btn">Buy Now &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--testimonial-->
+    <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <!-- <span>&#x275E;</span> -->
+            <span class="material-symbols-outlined">format_quote</span>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+              incidunt iusto aperiam possimus, impedit nemo, rem quam molestias
+            </p>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <!-- <img src='RedStore_Img/images/user-1.png'> -->
+            <img src="https://source.unsplash.com/random/50x50/?portrait" />
+            <h3>User Name</h3>
+          </div>
+          <div class="col-3">
+            <!-- <span>&#x275E;</span> -->
+            <span class="material-symbols-outlined">format_quote</span>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+              incidunt iusto aperiam possimus, impedit nemo, rem quam molestias
+            </p>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <!-- <img src='RedStore_Img/images/user-1.png'> -->
+            <img
+              src="https://source.unsplash.com/random/300x300/?portrait,male"
+            />
+            <h3>User Name</h3>
+          </div>
+          <div class="col-3">
+            <!-- <span>&#x275E;</span> -->
+            <span class="material-symbols-outlined">format_quote</span>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+              incidunt iusto aperiam possimus, impedit nemo, rem quam molestias
+            </p>
+            <div class="rating">
+              <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span>
+            </div>
+            <!-- <img src='RedStore_Img/images/user-1.png'> -->
+            <img
+              src="https://source.unsplash.com/random/300x300/?portrait,female"
+            />
+            <h3>User Name</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--brands-->
+    <div class="brands">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-5">
+            <!-- <img src="./RedStore_Img/images/logo-godrej.png" /> -->
+            <img
+              src="https://cdn.cdnlogo.com/logos/m/6/microsoft.svg"
+              height="40px"
+            />
+          </div>
+          <div class="col-5">
+            <!-- <img src="./RedStore_Img/images/logo-coca-cola.png" /> -->
+            <img
+              src="https://cdn.cdnlogo.com/logos/c/41/coca-cola.svg"
+              height="40px"
+            />
+          </div>
+          <div class="col-5">
+            <!-- <img src="./RedStore_Img/images/logo-philips.png" /> -->
+            <img
+              src="https://cdn.cdnlogo.com/logos/p/45/philips.svg"
+              height="40px"
+            />
+          </div>
+          <div class="col-5">
+            <!-- <img src="./RedStore_Img/images/logo-oppo.png" /> -->
+            <img
+              src="https://cdn.cdnlogo.com/logos/o/82/oppo-2019.svg"
+              height="40px"
+            />
+          </div>
+          <div class="col-5">
+            <!-- <img src="./RedStore_Img/images/logo-paypal.png" /> -->
+            <img
+              src="https://cdn.cdnlogo.com/logos/p/41/paypal.svg"
+              height="40px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="f-col-1">
+            <h3>Download our App</h3>
+            <p>Lorem, ipsum dolor adipisicing elit. Nulla, veniam.</p>
+            <div class="app-logo">
+              <img src="RedStore_Img/images/play-store.png" />
+              <img src="RedStore_Img/images/app-store.png" />
+            </div>
+          </div>
+          <div class="f-col-2">
+            <img src="./RedStore_Img/images/logo-white.png" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit, facilis.
+            </p>
+          </div>
+          <div class="f-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog</li>
+              <li>Terms</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div class="f-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">copyrights 2023 - Milan vala</p>
+      </div>
+    </div>
+
+    <!--js for toggle menu-->
+    <script>
+      var MenuItems = document.getElementById("menuitems");
+      MenuItems.style.maxHeight = "0px";
+      function menuToggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
