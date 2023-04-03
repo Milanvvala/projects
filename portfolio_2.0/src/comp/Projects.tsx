@@ -10,6 +10,8 @@ const Projects = () => {
       title: "Full Stack App",
       category: "Frontend, Backend",
       subtitle: "React, Node, Express, MongoDB",
+      link:'https://bookmarkingapp.onrender.com/',
+      code:'https://github.com/Milanvvala/projects/tree/main/bookmark'
     },
     {
       id: 2,
@@ -17,6 +19,8 @@ const Projects = () => {
       title: "Website Redesign",
       category: "Design",
       subtitle: "Figma",
+      link:'https://www.figma.com/file/dRAbBqltBSNA8dOeckyOjh/AW-Site?node-id=2-3',
+      code:'https://www.figma.com/file/dRAbBqltBSNA8dOeckyOjh/AW-Site?node-id=2-3'
     },
     {
       id: 3,
@@ -24,6 +28,8 @@ const Projects = () => {
       title: "Ecommerce Website",
       category: "Frontend Devleopment",
       subtitle: "HTML5, CSS3, JavaScript",
+      link:'https://mv-ecommerce-site.netlify.app/',
+      code:'https://github.com/Milanvvala/projects/tree/main/Ecommerce-site'
     },
   ];
 
@@ -39,8 +45,8 @@ const Projects = () => {
               <div>{pro.category}</div>
               <div className=" text-gray-400 text-base leading-4">{pro.subtitle}</div>
               <div className='flex space-x-6 text-blue-500 font-bold'> 
-              <a className='cursor-pointer text-lg hover:text-blue-300 hover:underline'>Code &#x2192;</a>
-              <a className='cursor-pointer text-lg hover:text-blue-300 hover:underline'>Live &#x2192;</a>
+              <a className='cursor-pointer text-lg hover:text-blue-300 hover:underline' href={pro.code} target='_blank' >Code &#x2192;</a>
+              <a className='cursor-pointer text-lg hover:text-blue-300 hover:underline' href={pro.link} target='_blank' >Live &#x2192;</a>
               </div>
             </div>
           );
