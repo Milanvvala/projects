@@ -1,6 +1,7 @@
 import fsa from '../assets/fsa.png'
 import awwr from '../assets/awwr.png'
 import ec from '../assets/ec.png'
+import more from '../assets/more.png'
 
 const Projects = () => {
   const Projects = [
@@ -30,6 +31,15 @@ const Projects = () => {
       subtitle: "HTML5, CSS3, JavaScript",
       link:'https://mv-ecommerce-site.netlify.app/',
       code:'https://github.com/Milanvvala/projects/tree/main/Ecommerce-site'
+    },
+    {
+      id: 4,
+      src: more,
+      title: "More Projects",
+      category: "Projects",
+      subtitle: "devlopment",
+      link:'https://milanvvala.github.io/',
+      code:'https://github.com/Milanvvala/projects/'
     },
   ];
 
