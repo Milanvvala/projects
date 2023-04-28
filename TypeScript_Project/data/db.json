@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "sku": "item001", "name": "Watch", "price": 9.99 },
+    { "sku": "item002", "name": "Sneacker", "price": 19.99 },
+    { "sku": "item003", "name": "Glasses", "price": 29.99 }
+  ]
+}
