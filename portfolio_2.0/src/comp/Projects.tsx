@@ -6,6 +6,15 @@ import more from '../assets/more.png'
 const Projects = () => {
   const Projects = [
     {
+      id: 0,
+      src: fsa,
+      title: "Type Script Store",
+      category: "Frontend",
+      subtitle: "React, Chakra UI, TypeScript",
+      link:'https://bookmarkingapp.onrender.com/',
+      code:'https://github.com/Milanvvala/projects/tree/main/bookmark'
+    },
+    {
       id: 1,
       src: fsa,
       title: "Full Stack App",
