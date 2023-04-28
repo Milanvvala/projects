@@ -1,20 +1,10 @@
 import {
-  Box,
   Button,
   Flex,
   Image,
   Select,
   Spacer,
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
   Text,
-  Tfoot,
-  Th,
-  Thead,
-  Tr,
 } from "@chakra-ui/react"
 
 import {

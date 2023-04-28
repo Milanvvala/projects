@@ -1,4 +1,4 @@
-import { ReactElement, createContext, useEffect, useState } from "react"
+import { ReactElement, createContext } from "react"
 
 export type ProductType = {
   sku: string
@@ -21,7 +21,8 @@ const initContextState: UseProductContextType = { products: [] }
 const ProductsContext = createContext<UseProductContextType>(initContextState)
 
 export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
-  const [products, setproducts] = useState(initState)
+  // const [products, setProducts] = useState(initState)
+  const products = initState
 
   // useEffect(() => {
   //   const fetchProducts = async (): Promise<ProductType[]> => {

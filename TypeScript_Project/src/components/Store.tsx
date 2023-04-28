@@ -1,4 +1,4 @@
-import { SimpleGrid, Spinner, Text } from "@chakra-ui/react"
+import { SimpleGrid } from "@chakra-ui/react"
 import useProducts from "../hooks/useProductsHook"
 import useCart from "../hooks/useCartHook"
 import { ProductCard } from "."

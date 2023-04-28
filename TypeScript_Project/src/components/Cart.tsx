@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Badge, Button, Heading, Spacer, Text } from "@chakra-ui/react"
+import { Badge, Button, Heading, Text } from "@chakra-ui/react"
 import CartItem from "./CartItem"
 import { ThankYou } from "./"
 import useCart from "../hooks/useCartHook"

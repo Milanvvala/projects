@@ -1,10 +1,8 @@
 import {
   ReactElement,
   createContext,
-  useEffect,
   useMemo,
   useReducer,
-  useState,
 } from "react"
 
 export type CartItemType = {
@@ -16,7 +14,7 @@ export type CartItemType = {
 
 export type CartStateType = { cart: CartItemType[] }
 
-const initCartState: CartStateType = { cart: [] }
+// const initCartState: CartStateType = { cart: [] }
 
 const Reducer_Action_Type = {
   Add: "ADD",
