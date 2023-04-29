@@ -2,17 +2,18 @@ import fsa from '../assets/fsa.png'
 import awwr from '../assets/awwr.png'
 import ec from '../assets/ec.png'
 import more from '../assets/more.png'
+import tsc from '../assets/more.png'
 
 const Projects = () => {
   const Projects = [
     {
       id: 0,
-      src: fsa,
+      src: tsc,
       title: "Type Script Store",
       category: "Frontend",
       subtitle: "React, Chakra UI, TypeScript",
-      link:'https://bookmarkingapp.onrender.com/',
-      code:'https://github.com/Milanvvala/projects/tree/main/bookmark'
+      link:'https://mv-tsproject.netlify.app/',
+      code:'https://github.com/Milanvvala/projects/tree/main/TypeScript_Project'
     },
     {
       id: 1,
