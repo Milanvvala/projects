@@ -2,7 +2,7 @@ import fsa from '../assets/fsa.png'
 import awwr from '../assets/awwr.png'
 import ec from '../assets/ec.png'
 import more from '../assets/more.png'
-import tsc from '../assets/more.png'
+import tsc from '../assets/tsc.png'
 
 const Projects = () => {
   const Projects = [

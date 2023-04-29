@@ -1,7 +1,8 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import { createAction } from './components/utils'
+import { Create, Dashboard, Layout, Profile } from './components'
 // import { taskLoder } from './components/utils'
-import { Create, Dashboard, Layout, Profile } from './components' // layouts and pages
+
 
 // router and routes
 const router = createBrowserRouter(
@@ -16,9 +17,5 @@ const router = createBrowserRouter(
 )
 
 export default function App() {
-
-  return (
-    <RouterProvider router={router} />
-  )
-
+  return <RouterProvider router={router} />  
 }
