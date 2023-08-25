@@ -6,7 +6,7 @@ const About = () => {
         <div>
           <div className="font-bold text-4xl text-white md:text-6xl md:leading-[60px]">About me</div>
           <div>
-            I am Mahatva Self Taught Web Designer & Developer. Currently Looking
+            I am Milan Self Taught Web Designer & Developer. Currently Looking
             for New and Exiting Projects to Work on. From Start i always Surfed
             Web With Curiosity To Find something New to Learn, Now i am The one
             Building Websites This Feels Like Dream.
