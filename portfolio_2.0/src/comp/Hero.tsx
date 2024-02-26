@@ -1,4 +1,3 @@
-import React from "react";
 
 const Hero = () => {
   return (
@@ -31,20 +30,3 @@ const Hero = () => {
 };
 
 export default Hero;
-/*
-<h1 className="font-bold max-w-md text-center text-3xl md:text-4xl md:text-left font-Inter">
-            Hey There
-            <span className="material-symbols-outlined text-4xl">waving_hand</span><br />
-            This is Milan Vala,
-            a <span className="material-symbols-outlined text-4xl text-blue-500">language</span>WEB<br />
-            <span className="material-symbols-outlined text-4xl text-gray-500">code</span>
-            <span className='font-extrabold font-RobotoMono text-slate-900'>Devloper</span> &<br />
-            <span className="material-symbols-outlined text-4xl text-pink-500">palette</span>
-            <span className='font-serif'>Designer</span><br />
-            based in India.<br />
-            Available for Freelance, Work & Collaborations.
-          </h1>
-          Milan Vala
-            <br />I am a Web designer and a Front-end developer.
-          </div>
-*/
