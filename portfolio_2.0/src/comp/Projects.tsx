@@ -1,10 +1,10 @@
-import { fsa, awwr, ec, more, tsp, rdt } from "../assets"
+import { fsa, awwr, ec, more, tsp, rdts } from "../assets"
 
 const Projects = () => {
   const Projects = [
     {
       id: -1,
-      src: rdt,
+      src: rdts,
       title: "Redix Ui Templates",
       category: "Frontend",
       subtitle: "Next Js, Redix UI, TypeScript",
