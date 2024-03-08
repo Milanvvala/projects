@@ -1,4 +1,4 @@
-import { fsa, awwr, ec, more, tsp, rdts } from "../assets"
+import { fsa, awwr, ec, more, tsp, rdts,rd} from "../assets"
 
 const Projects = () => {
   const Projects = [
@@ -20,14 +20,23 @@ const Projects = () => {
       link: "https://mv-tsproject.netlify.app/",
       code: "https://github.com/Milanvvala/projects/tree/main/TypeScript_Project"
     },
+    // {
+    //   id: 1,
+    //   src: fsa,
+    //   title: "Full Stack App",
+    //   category: "Frontend, Backend",
+    //   subtitle: "React, Node, Express, MongoDB",
+    //   link: "https://bookmarkingapp.onrender.com/",
+    //   code: "https://github.com/Milanvvala/projects/tree/main/bookmark"
+    // },
     {
       id: 1,
-      src: fsa,
-      title: "Full Stack App",
-      category: "Frontend, Backend",
-      subtitle: "React, Node, Express, MongoDB",
-      link: "https://bookmarkingapp.onrender.com/",
-      code: "https://github.com/Milanvvala/projects/tree/main/bookmark"
+      src: rd,
+      title: "React Dashboard",
+      category: "Frontend Dashboard",
+      subtitle: "React, CSS",
+      link: "https://react-dashboard-k0o0.onrender.com/",
+      code: "https://github.com/Milanvvala/projects/tree/main"
     },
     {
       id: 2,
