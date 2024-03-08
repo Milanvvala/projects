@@ -23,9 +23,9 @@ const About = () => {
           {/* <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/#F7DF1E" title="JavaScript" /> */}
           <img height="32" width="32" src="https://cdn.simpleicons.org/typescript/#3178C6" title="TypeScript" />
           {/* <img height="32" width="32" src="https://cdn.simpleicons.org/react/#61DAFB" title="React" /> */}
-          <img height="32" width="32" src="https://cdn.simpleicons.org/nextdotjs/#ffffff" title="NextJS" />
+          <img height="32" width="32" src="https://cdn.simpleicons.org/nextdotjs/_/eee" title="NextJS" />
           <img height="32" width="32" src="https://cdn.simpleicons.org/tailwindcss/#06B6D4" title="Tailwind CSS" />
-          <img height="32" width="32" src="https://cdn.simpleicons.org/shadcnui/#000000" title="Shadcn UI" />
+          <img height="32" width="32" src="https://cdn.simpleicons.org/shadcnui/_/eee" title="Shadcn UI" />
           <img height="32" width="32" src="https://cdn.simpleicons.org/figma/#F24E1E" title="Figma"/>
           </div>
         </div>
