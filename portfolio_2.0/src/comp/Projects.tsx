@@ -36,7 +36,7 @@ const Projects = () => {
       category: "Frontend Dashboard",
       subtitle: "React, CSS",
       link: "https://react-dashboard-k0o0.onrender.com/",
-      code: "https://github.com/Milanvvala/projects/tree/main"
+      code: "https://github.com/Milanvvala/react-dashboard"
     },
     {
       id: 2,
