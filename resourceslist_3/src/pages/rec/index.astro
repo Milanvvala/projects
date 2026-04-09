@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import ResourceCard from "@/components/astro/ResourceCard.astro";
+const rec = await getCollection("resources");
+---
+
+<Layout>
+  <div class="post-wrapper">
+    <h1>Posts</h1>
+    <div>
+      {rec.map((r) => <ResourceCard rec={r} />)}
+    </div>
+  </div>
+</Layout>

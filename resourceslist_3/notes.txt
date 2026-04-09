@@ -1,0 +1,38 @@
+npm create cloudflare@latest -- my-astro-app --framework=astro
+npm install tailwindcss @tailwindcss/vite
+npx shadcn@latest init
+npx shadcn@latest add button
+npm i react react-dom @astrojs/react
+
+Schema for Resource
+
+image : string
+title : string
+description : string 
+details : markdown
+prising : enum
+
+filterd content
+
+filter 
+input for search 
+select elemenyt for pricing and and category
+
+filtersheet
+shadcnui sheet component with react children
+imported filter component
+<Filter {...props} />
+
+explore 
+ usestates selectcat,selectpr, isdeals and searcquery 
+ imported pGreed and Filtersheet
+ passed all states in product greed and filtersheet
+
+
+<ul className="space-y-2"> {/* Filtered Resources List */
+{filteredResources.map((resource, index) => (
+    <li key={index} className="p-2 border rounded">
+        <strong>{resource.data.title}</strong> - {resource.data.category} - {resource.data.pricing}
+    </li>
+))}
+</ul>

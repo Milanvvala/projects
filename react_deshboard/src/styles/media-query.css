@@ -1,0 +1,202 @@
+/* Media Queryes */
+
+@media (max-width: 376px) {
+  /* App */
+
+  .desktop-only {
+    display: none;
+  }
+  main {
+    margin: 100px 0px 0px 0px;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  /* PopupForm */
+
+  .popupform {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .form-head {
+    padding: 0 15px;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 60px;
+  }
+  label {
+    font-size: 12px;
+  }
+  input,
+  select {
+    height: 50px;
+    font-size: 12px;
+  }
+  ::placeholder {
+    font-size: 12px;
+    color: var(--dark-gray);
+  }
+  .closeicon-wraper {
+    height: 40px;
+    width: 40px;
+    background-color: var(--red-bg);
+    border-radius: 60px;
+  }
+  .cuticon {
+    fill: "#d63500";
+  }
+
+  /* Topbar */
+
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 0;
+  }
+  .header-wraper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  .mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    height: 50px;
+  }
+  .topbar-tabs-mobile {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    height: 50px;
+  }
+  .tab {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 50%;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    padding: 40px 20px 10px 20px;
+    gap: 10px;
+    transition: all 1s ease;
+    translate: -100%;
+  }
+  .sidebar-head {
+    height: 36px;
+    align-items: start;
+  }
+  .item {
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    gap: 8px;
+  }
+  .status_menu {
+    width: 100%;
+    flex-direction: row-reverse;
+    padding: 10px;
+  }
+  .status_menu > .item {
+    padding: 0;
+  }
+  
+
+  /* Overview */
+
+  .overview-chart {
+    flex-direction: column;
+  }
+  .overview-section {
+    border-bottom: 1px solid var(--border-color);
+    border-right: none;
+    padding: 10px 14px;
+  }
+  .section-title {
+    font-weight: 500;
+  }
+  .gap {
+    gap: 14px;
+  }
+  .numbers {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .increase {
+    font-size: 10px;
+  }
+  .number-detail {
+    font-size: 10px;
+  }
+  .vertical-devider {
+    height: 100%;
+    border-left: 1px solid var(--border-color);
+  }
+  .overview-section-mobile {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .overview-section-mobile .overview-section {
+    width: 50%;
+    border-bottom: "none";
+  }
+  .overview-section-mobile #left {
+    border-right: 1px solid var(--border-color);
+    border-bottom: 0;
+  }
+  .overview-section-mobile #right {
+    border: none;
+  }
+  .overview-chart #bottom {
+    border-bottom: 0;
+  }
+
+  /* My Assesment */
+  .assesment-grid {
+    gap: 15px;
+    grid-template-columns: none;
+    overflow: visible;
+  }
+  .add {
+    width: max-content;
+    padding: 20px 30px;
+    justify-content: center;
+  }
+  .instruction {
+    width: 285px;
+  }
+
+  /* Assesment */
+  .assessment {
+    padding: 14px;
+    gap: 10px;
+    width: 100%;
+    overflow: inherit;
+  }
+
+  .assesment-title {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 376px) {
+  .mobile-only {
+    display: none;
+  }
+}

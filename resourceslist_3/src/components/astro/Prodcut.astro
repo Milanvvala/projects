@@ -1,0 +1,181 @@
+---
+import { Image } from "astro:assets";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { recDetails } from "@/lib/data";
+import { ArrowLeft, Building2, CalendarDays } from "lucide-react";
+import AccordionWrapper from "@/components/react/AccordianWrap";
+import type { CollectionEntry } from "astro:content";
+import ResourceCard from "@/components/astro/ResourceCard.astro";
+import { getCollection } from "astro:content";
+import ResourcesGrid from "@/components/astro/ResourcesGrid.astro";
+import { getEntries } from "astro:content";
+
+export async function getDemoEntries() {
+    const allEntries = await getCollection("resources"); // Replace "blog" with your collection name
+    return allEntries.slice(0, 2); // Get the first two entries
+}
+const demo = await getDemoEntries();
+
+type Props = {
+    product: CollectionEntry<"resources">;
+};
+const { product } = Astro.props;
+const  {Content}  = await product.render();
+
+const accordionItems = [
+    {
+        value: "resource-details",
+        title: "Resource Details",
+    },
+];
+
+const relatedResources = product.data.relatedResources
+    ? await getEntries(product.data.relatedResources)
+    : [];
+---
+
+<div class="min-h-screen flex flex-col">
+    <main class="flex-1">
+        {/* Back Link */}
+        <div class="container mx-auto px-4 py-4">
+            <a
+                href="/explore"
+                class="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-4"
+            >
+                <ArrowLeft className="h-4 w-4" />
+                Back to Explore
+            </a>
+        </div>
+
+        <div class="container mx-auto px-4 pb-8 space-y-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                {/* Main Content - 70% */}
+                <div class="lg:w-[70%] space-y-8">
+                    {/* Header Section */}
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6">
+                            <Image
+                                src={product.data.image}
+                                alt={`${product.data.title} logo`}
+                                width={64}
+                                height={64}
+                                class="rounded-lg"
+                            />
+                            <div class="space-y-2">
+                                <h1 class="text-4xl font-bold">
+                                    {product.data.title}
+                                </h1>
+                                <p class="text-muted-foreground">
+                                    {product.data.description}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div
+                                class="flex flex-wrap gap-4 items-center text-muted-foreground"
+                            >
+                                <div class="flex items-center gap-2">
+                                    <Building2 className="h-4 w-4" />
+                                    <span>{product.data.category}</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <CalendarDays className="h-4 w-4" />
+                                    <span>{product.data.date}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-2">
+                                <Badge variant="secondary"
+                                    >{recDetails.salary}</Badge
+                                >
+                                <Badge variant="outline">Remote Friendly</Badge>
+                            </div>
+
+                            {/* Tags Section */}
+                            <!-- <div class="flex flex-wrap gap-2">
+                                {
+                                    recDetails.tags.map((tag) => (
+                                        <Badge
+                                            key={tag}
+                                            variant="secondary"
+                                            className="bg-primary/10 text-primary hover:bg-primary/20"
+                                        >
+                                            {tag}
+                                        </Badge>
+                                    ))
+                                }
+                            </div> -->
+
+                            {/* Available On Section */}
+                            <!-- <div class="flex items-center gap-4 text-muted-foreground" >
+                                <span class="text-sm font-medium"
+                                    >Available on:</span
+                                >
+                                <div class="flex gap-3">
+                                    {
+                                        recDetails.availableOn.map(
+                                            (platform, index) => {
+                                                const Icon = platform.icon;
+                                                return (
+                                                    <div
+                                                        // key={platform.label}
+                                                        class="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                                                        title={platform.label}
+                                                    >
+                                                        <Icon class="h-5 w-5" />
+                                                    </div>
+                                                );
+                                            },
+                                        )
+                                    }
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div class="flex gap-4">
+                        <Button size="lg">Apply Now</Button>
+                        <Button size="lg" variant="outline">Save Job</Button>
+                    </div>
+
+                    {/* Job Details Accordion */}
+                    <AccordionWrapper client:load items={accordionItems}>
+                        <Content />
+                    </AccordionWrapper>
+                </div>
+
+                {/* Sponsored Jobs Sidebar - 30% */}
+                <div class="lg:w-[30%] space-y-4">
+                    <h2 class="text-xl font-semibold">Sponsored Jobs</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        {
+                            demo.map((resource) => (
+                                <ResourceCard rec={resource} />
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto">
+                {
+                    relatedResources.length > 0 && (
+                        <div class="container mx-auto space-y-4">
+                            <h2 class="text-3xl font-bold">
+                                Related Resources
+                            </h2>
+                            <div>
+                                {relatedResources.map((p) => (
+                                    <ResourceCard rec={p} />
+                                ))}
+                            </div>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+    </main>
+</div>

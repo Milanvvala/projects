@@ -1,0 +1,52 @@
+---
+import { getCollection, getEntry, getEntries } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import ResourceCard from "@/components/astro/ResourceCard.astro";
+import { Image } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
+import Prodcut from "@/components/astro/Prodcut.astro";
+type Props = { entry: CollectionEntry<"resources"> };
+const { entry } = Astro.props;
+
+export async function getStaticPaths() {
+    const resources = await getCollection("resources");
+    return resources.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+const relatedResources = entry.data.relatedResources
+    ? await getEntries(entry.data.relatedResources)
+    : [];
+
+const product: CollectionEntry<"resources"> = entry;
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+    <Prodcut product={product} />
+    <!-- <div>
+        <Image src={entry.data.image} alt={entry.data.title} width="25" />
+        <p>{entry.data.title}</p>
+        <span>•</span>
+        <time datetime={entry.data.date.toISOString()}
+            >{
+                entry.data.date.toLocaleDateString(undefined, {
+                    dateStyle: "medium",
+                    timeZone: "UTC",
+                })
+            }</time
+        >
+    </div> -->
+    <!-- {
+        relatedResources.length > 0 && (
+            <div class="post-wrapper">
+                <h2>Related Resources</h2>
+                <div>
+                    {relatedResources.map((p) => (
+                        <ResourceCard rec={p} />
+                    ))}
+                </div>
+            </div>
+        )
+    } -->
+</Layout>

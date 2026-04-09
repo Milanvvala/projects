@@ -1,0 +1,25 @@
+#root {
+  /* Variables */
+  --blue: #0073e6;
+  --blue-bg: #f6f8fa;
+  --active-bg: #e5f1fc;
+  --dark-blue: #1c4980; --font-color: #1c4980;
+  --light-blue-categories: #ddedff;
+  --dark-gray: #8da4bf;
+  --light-gray: #dadce0; --border-color: #dadce0;
+  --red: #d63500;
+  --red-bg: #fbebea;
+  --green: #05c165;
+  --pink: #e9407a;
+  --light-pink: #fce8ef;
+  --purple: #6548ee;
+  --light-purple: #ebe8fd;
+
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--font-color);
+  background-color: var(--blue-bg);
+  height: 100vh;
+}
+

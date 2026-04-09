@@ -1,0 +1,64 @@
+---
+import { LuFacebook, LuTwitter, LuGithub } from "react-icons/lu";
+import { Image } from "astro:assets";
+const footerLinks = [
+    { name: "Advertise", href: "/ads" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Condition", href: "/termsandcondition" },
+    { name: "Sitemap", href: "/sitemap" },
+];
+const socialLinks = [
+    { icon: LuFacebook, href: "/fb" },
+    { icon: LuTwitter, href: "/x" },
+    { icon: LuGithub, href: "/github" },
+];
+---
+
+<footer class="border-t">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col items-center space-y-4">
+            {/* Logo */}
+            <a href="#" class="text-xl font-semibold text-primary">
+                <Image
+                    src="/logo-text.svg"
+                    alt="Brand Logo"
+                    width={120}
+                    height={24}
+                />
+            </a>
+
+            {/* Navigation Links */}
+            <nav class="flex gap-6 flex-wrap justify-center">
+                {
+                    footerLinks.map((link) => (
+                        <a
+                            href={link.href}
+                            class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            {link.name}
+                        </a>
+                    ))
+                }
+            </nav>
+
+            {/* Social Links */}
+            <div class="flex gap-4">
+                {
+                    socialLinks.map((link, i) => (
+                        <a
+                            href={link.href}
+                            class="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            <link.icon className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+                        </a>
+                    ))
+                }
+            </div>
+
+            {/* Copyright */}
+            <p class="text-sm text-muted-foreground">
+                © 2024 Brand. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>

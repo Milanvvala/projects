@@ -1,0 +1,117 @@
+/* Assessments */
+
+.assessment {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 388px;
+}
+img {
+  height: 50px;
+}
+.heading {
+  font-size: 18px;
+}
+.assesment-top {
+  display: flex;
+  justify-content: space-between;
+}
+.assesment-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.subheading {
+  font-size: 14px;
+  font-weight: 600;
+}
+.details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  vertical-align: middle;
+}
+.line {
+  border-left: 1px ;
+  height: 16px;
+}
+.cal-icon {
+  height: 14px;
+  width: 14px;
+}
+.date-text {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  vertical-align: middle;
+}
+.date {
+  color: var(--dark-gray);
+  font-size: 12px;
+}
+.hr-devider {
+  border-bottom: 1px dashed var(--border-color);
+}
+.assessment-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.dataset {
+  display: flex;
+  gap: 14px;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: -1px;
+}
+.number {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+}
+.tag {
+  font-size: 12px;
+  line-height: 140%;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.share {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: max-content;
+  padding: 2px 8px 2px 6px;
+  gap: 4px;
+  background-color: #fff;
+  color: var(--dark-blue);
+  font-size: 14px;
+  line-height: 140%;
+  border: 1px solid var(--dark-blue);
+  border-radius: 999px;
+}
+.profiles {
+  display: flex;
+  gap: 4px;
+}
+.attendees {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: var(--purple);
+  border-radius: 99px;
+  width: max-content;
+  height: max-content;
+  padding: 5px 6px;
+}
+.assessments-num {
+  font-size: 12px;
+  font-weight: 600;
+}

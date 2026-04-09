@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import Footer from "@/components/astro/Footer.astro";
+import Navbar from "@/components/astro/Navbar.astro";
+const {
+	title = "Content Collections",
+	description = "A site about Content Collections with Astro.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>

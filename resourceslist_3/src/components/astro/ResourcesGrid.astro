@@ -1,0 +1,12 @@
+---
+// import { resourcesGrid } from "@/lib/data";
+import ResourceCard from "./ResourceCard.astro";
+import { getCollection } from "astro:content";
+const rec = await getCollection("resources");
+---
+
+<div class="container mx-auto py-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {rec.map((r) => <ResourceCard rec={r} />)}
+    </div>
+</div>

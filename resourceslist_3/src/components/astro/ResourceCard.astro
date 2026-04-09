@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import { Card } from "@/components/ui/card";
+import type { CollectionEntry } from "astro:content";
+type Props = { rec: CollectionEntry<"resources"> };
+const { rec } = Astro.props;
+const { title, image, description } = Astro.props.rec.data;
+---
+
+<a href={`/rec/${rec.slug}`}>
+    <Card className="p-4 hover:bg-gray-100 transition-colors h-full">
+        <div class="flex gap-4">
+            <div class="flex-shrink-0">
+                <Image
+                    src={image}
+                    alt={`${title} logo`}
+                    width={52}
+                    height={52}
+                    class="rounded-xl bg-gray-100"
+                />
+            </div>
+            <div class="flex-grow min-w-0">
+                <h3 class="text-lg font-semibold truncate">{title}</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">{description}</p>
+            </div>
+        </div>
+    </Card>
+</a>

@@ -1,0 +1,104 @@
+---
+// import { Star } from "lucide-react";
+// import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+const hero = {
+    heading: "A Collection of Components Built With Shadcn & Tailwind",
+    description:
+        "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+    button: {
+        text: "Discover all components",
+        url: "https://www.shadcnblocks.com",
+    },
+    reviews: {
+        count: 200,
+        avatars: [
+            {
+                src: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
+                alt: "Avatar 1",
+            },
+            {
+                src: "https://www.shadcnblocks.com/images/block/avatar-2.webp",
+                alt: "Avatar 2",
+            },
+            {
+                src: "https://www.shadcnblocks.com/images/block/avatar-3.webp",
+                alt: "Avatar 3",
+            },
+            {
+                src: "https://www.shadcnblocks.com/images/block/avatar-4.webp",
+                alt: "Avatar 4",
+            },
+            {
+                src: "https://www.shadcnblocks.com/images/block/avatar-5.webp",
+                alt: "Avatar 5",
+            },
+        ],
+    },
+};
+---
+
+<section class="pt-16 pb-8">
+    <div
+        class="container px-4 mx-auto flex flex-col items-center justify-center"
+    >
+        <div class="mx-auto flex max-w-screen-lg flex-col gap-6 items-center">
+            <h1 class="text-3xl font-extrabold lg:text-6xl text-center">
+                {hero.heading}
+            </h1>
+            <p
+                class="text-balance text-muted-foreground lg:text-lg text-center"
+            >
+                {hero.description}
+            </p>
+        </div>
+
+        <form id="subscribe-form" class="mt-6 flex w-full max-w-sm gap-2">
+            <Input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email"
+                className="flex-1"
+                required
+            />
+            <Button type="submit">Subscribe</Button>
+        </form>
+
+        <!-- <div class="mt-6 flex w-fit flex-col items-center gap-4 sm:flex-row">
+            <span class="mx-4 inline-flex items-center -space-x-4">
+                {
+                    hero.reviews.avatars.map((avatar, index) => (
+                        <Avatar key={index} className="size-14 border">
+                            <AvatarImage src={avatar.src} alt={avatar.alt} />
+                        </Avatar>
+                    ))
+                }
+            </span>
+            <div>
+                <div class="flex items-center gap-1">
+                    {
+                        [...Array(5)].map((_, index) => (
+                            <Star
+                                key={index}
+                                className="size-5 fill-yellow-400 text-yellow-400"
+                            />
+                        ))
+                    }
+                </div>
+                <p class="text-left font-medium text-muted-foreground">
+                    from {hero.reviews.count}+ reviews
+                </p>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<script>
+    document
+        .getElementById("subscribe-form")
+        ?.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("Form submitted!");
+        });
+</script>

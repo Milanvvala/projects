@@ -1,0 +1,27 @@
+---
+import MobileMenu from "@/components/react/Menu";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import FilterdContent from "@/components/react/FilteredContent";
+const rec: Resource[] = await getCollection("resources");
+import type { CollectionEntry } from "astro:content";
+import FilterSidebar from "@/components/react/FilterSidebar";
+type Resource = CollectionEntry<"resources">;
+
+const resources = rec.map((resource) => ({
+  data: {
+    title: resource.data.title,
+    category: resource.data.category,
+    pricing: resource.data.pricing,
+    description: resource.data.description,
+  },
+  slug: resource.slug,
+}));
+---
+
+<Layout>
+    <!-- <FilterdContent client:load resources={resources} /> -->
+     <!-- {resources.map(e => <p>{e.data.title}</p>)} -->
+      <!-- <div><FilterSidebar client:load />  </div> -->
+    <!-- <MobileMenu client:load /> -->
+</Layout>

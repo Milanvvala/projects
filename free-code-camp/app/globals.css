@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply block w-full rounded-md border-0 py-1.5 pl-7 pr-8 text-gray-900 placeholder:text-gray-400
+  }
+  .form-lable{
+    @apply block text-lg pb-1 font-medium leading-6 text-gray-500
+  }
+  .button {
+    @apply block border py-2 px-4 rounded-md hover:bg-white hover:text-black font-semibold text-xl
+  }
+  .title {
+    @apply text-3xl font-semibold
+  }
+  .nav-link{
+    @apply  underline hover:text-blue-500 mr-2
+  }
+}
