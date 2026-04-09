@@ -1,0 +1,22 @@
+npx create-next-app@latest .
+npm i @radix-ui/react-icons @radix-ui/themes next-seo react-code-blocks react-slick @chakra-ui/hooks next-themes
+npm i prettier husky -D
+
+Home Page Sections : Nav - Hero - Features - Open Source - CTA - Footer
+Templates Page : Nav - Sidebar - Main - Footer 
+
+
+"use client"
+import { Flex, Text } from "@radix-ui/themes"
+
+export default function Dashboard() {
+  return (
+    <Flex>
+        <Text>Text</Text>
+    </Flex>
+  )
+}
+
+https://source.unsplash.com/random/300x300/?product
+
+Comments
